@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| To Do List ||</title>
+
+    <!-- font awsome stylesheet -->
+    <link rel="stylesheet" href="all.css">
+
+    <!-- stylesheet generator -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="todo-wrapper">
+            <h2>to do list</h2>
+
+            <!-- todo form start -->
+            <div class="todo-form">
+
+                <!-- input section -->
+                <div class="input-part">
+                    <input type="text" placeholder="name...">
+                    <input type="hidden" class="transferindex">
+                    <button class="submit add">add item</button>
+                    <button class="submit save" style="display: none;">save</button>
+                </div>
+
+                <!-- Item section -->
+                <div class="item-wrapper">
+
+                    <!-- single item -->
+                    <!-- <div class="item">
+                        <h4 class="left-text"><span class="nmbr">${index+1}.</span> ${taskName}</h4>
+                        <div class="right-icon-wrapper">
+                            <a href="#" class="complete item-icon" onclick="complete()">
+                                <i class="far fa-check-circle"></i>
+                            </a>
+                            <a href="#" class="edit item-icon" onclick="edit(index)">
+                                <i class="far fa-edit"></i>
+                            </a>
+                            <a href="#" class="delete item-icon" onclick="deleteFun()">
+                                <i class="far fa-times-circle"></i>
+                            </a>
+                        </div>
+                    </div> -->
+
+                    <!-- clear button -->
+
+                </div><!-- /end of wrapper-->
+                <div class="clear-btn">
+                    <button class="clear-item">clear items</button>
+                </div>
+            </div><!-- /end of todo-form-->
+
+        </div><!-- /end of todo-wrapper-->
+    </section><!-- /end of container-->
+
+    <!-- js file -->
+    <script src="main.js"></script>
+</body>
+
+</html>
