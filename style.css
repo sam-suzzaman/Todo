@@ -28,8 +28,8 @@ body {
     width: 40%;
     height: 100%;
     padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.16);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
     border-radius: 10px;
 }
 
