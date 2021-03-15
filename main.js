@@ -60,13 +60,13 @@ function showTask() {
                         <h4 class="left-text"><span class="nmbr">${index+1}.</span> ${taskName}</h4>
                         <div class="right-icon-wrapper">
                             <a href="#" class="complete item-icon" onclick="complete(${index})">
-                                <i class="far fa-check-circle"></i>
+                                <i class="fa fa-check" aria-hidden="true"></i>
                             </a>
                             <a href="#" class="edit item-icon" onclick="edit(${index})">
-                                <i class="far fa-edit"></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </a>
                             <a href="#" class="delete item-icon" onclick="deleteFun(${index})">
-                                <i class="far fa-times-circle"></i>
+                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>`
