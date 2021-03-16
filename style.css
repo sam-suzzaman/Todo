@@ -28,8 +28,8 @@ body {
     width: 40%;
     height: 100%;
     padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
     border-radius: 10px;
 }
 
@@ -185,4 +185,53 @@ body {
 .cmplt {
     text-decoration: line-through;
     color: rgba(0, 255, 255, 0.6);
+}
+
+
+/* =====creating a popup/tooltip===== */
+.item-icon {
+    position: relative;
+}
+
+.item-icon::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -99999px;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    width: max-content;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: #333;
+    text-align: center;
+    background: #ffffff;
+    padding: 3px 8px;
+    border-radius: 3px;
+    transition: .2s;
+}
+
+.item-icon::after {
+    content: '';
+    border-width: 7px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+    position: absolute;
+    top: -99999px;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .2s;
+}
+
+.item-icon:hover::before {
+    top: -0.5rem;
+    opacity: 1;
+}
+
+.item-icon:hover::after {
+    top: -28%;
+    opacity: 1;
 }
