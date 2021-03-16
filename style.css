@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(1.jpg);
+    background: rgb(0, 121, 101);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,14 +28,14 @@ body {
     width: 40%;
     height: 100%;
     padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(0.8px);
     border-radius: 10px;
 }
 
 .todo-wrapper h2 {
     text-align: center;
-    color: #fff;
+    color: #ffcc29;
     text-transform: capitalize;
     font-weight: 300;
     letter-spacing: 1px;
@@ -46,34 +46,38 @@ body {
     width: 100%;
     display: flex;
     margin: 40px auto;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
 }
 
 .input-part input {
     outline: none;
     padding: 13px 10px;
-    border-radius: 3px 0 0 3px;
     width: 80%;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: capitalize;
     letter-spacing: 1px;
     border: none;
-    background: rgba(255, 255, 255, 0.16);
-    color: aqua;
-    border-right: 1px solid aqua;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border-right: 1px solid #000000;
     transition: .3s;
 }
 
 .input-part input:focus {
-    background: rgba(255, 255, 255, 0.26);
+    background: rgba(0, 175, 145, 0.1);
 }
 
 ::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(0, 0, 0);
-    opacity: 0.7;
-    /* Firefox */
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
+.input-part input:focus::placeholder {
+    opacity: 0.2;
+}
 
 .input-part .submit {
     width: 20%;
@@ -86,20 +90,19 @@ body {
     word-spacing: 3px;
     color: rgb(0, 0, 0);
     border-radius: 0 3px 3px 0;
-    background: rgba(255, 255, 255, 0.16);
+    background: transparent;
     cursor: pointer;
     transition: .3s;
 }
 
-.input-part .submit:hover,
-.submit:focus {
-    background-color: #f77722;
+.input-part .submit:hover {
+    background-color: #007965;
     color: #fff;
 }
 
 .item-wrapper {
     width: 100%;
-    color: aqua;
+    color: #000;
 }
 
 .item-wrapper .item {
@@ -108,7 +111,7 @@ body {
     justify-content: space-between;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
 }
 
 .item-wrapper .item:last-child {
@@ -128,27 +131,20 @@ body {
     margin-right: -2px;
 }
 
+.item .right-icon-wrapper {
+    width: 20%;
+}
 
 .item .right-icon-wrapper a {
-    width: 15%;
-    color: aqua;
-    margin-left: 18px;
+    display: inline-block;
+    width: 34px;
+    color: #fff;
     text-decoration: none;
     font-weight: 300;
-    font-size: 26px;
+    font-size: 20px;
+    text-align: center;
 }
 
-.item .right-icon-wrapper a:first-child {
-    margin-left: 0;
-}
-
-.item .right-icon-wrapper a.complete {
-    color: rgb(25, 199, 25);
-}
-
-.item .right-icon-wrapper a.delete {
-    color: rgb(255, 72, 16);
-}
 
 
 .clear-btn {
@@ -161,7 +157,7 @@ body {
 .clear-btn .clear-item {
     border: none;
     outline: none;
-    background: rgba(255, 255, 255, 0.6);
+    background: transparent;
     padding: 13px 30px;
     text-transform: capitalize;
     letter-spacing: 1px;
@@ -169,26 +165,21 @@ body {
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid rgb(0, 0, 0);
     transition: .3s;
     color: rgb(0, 0, 0);
 }
 
 .clear-btn .clear-item:hover {
-    background: rgba(255, 255, 255, .1);
-    color: #16df7a;
-}
-
-.clear-btn .clear-item:focus {
-    background-color: rgb(72, 250, 56);
+    background: #007965;
     color: #fff;
 }
 
 
-/* complete class */
+/* ===complete class=== */
 .cmplt {
     text-decoration: line-through;
-    color: rgba(0, 255, 255, 0.6);
+    color: rgba(0, 121, 101, 0.9);
 }
 
 
@@ -236,6 +227,6 @@ body {
 }
 
 .item-icon:hover::after {
-    top: -28%;
+    top: -35%;
     opacity: 1;
 }
